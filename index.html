@@ -82,21 +82,20 @@
         placeholder="Enter your email"
         style="padding: 10px; border-radius: 5px; border: none; width: 250px;"
       />
+      <!-- Redirect user after submit -->
+      <input type="hidden" name="_redirect" value="https://vexrodev.github.io/portfolio/thank-you.html" />
       <button type="submit" class="button">Subscribe</button>
     </form>
-    <p id="thank-you-message" style="display:none; color: green; margin-top: 10px;">
-      Thanks for subscribing! Please check your email to confirm.
-    </p>
   </section>
 
-<script src="https://utteranc.es/client.js"
-        repo="Vexrodev/portfolio"
-        issue-term="pathname"
-        label="Comment"
-        theme="github-dark"
-        crossorigin="anonymous"
-        async>
-</script>
+  <script src="https://utteranc.es/client.js"
+          repo="Vexrodev/portfolio"
+          issue-term="pathname"
+          label="Comment"
+          theme="github-dark"
+          crossorigin="anonymous"
+          async>
+  </script>
 
   <footer>
     <p>© 2025 VexroDev. All rights reserved.</p>
@@ -133,24 +132,6 @@
         top: 0,
         behavior: 'smooth'
       });
-    });
-  </script>
-
-  <script>
-    const form = document.getElementById('newsletter-form');
-    const thankYouMsg = document.getElementById('thank-you-message');
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault(); // prevent page reload
-
-      // Open FormSubmit in new tab for user verification
-      window.open(form.action, '_blank');
-
-      // Show thank you message
-      thankYouMsg.style.display = 'block';
-
-      // Clear the form input
-      form.reset();
     });
   </script>
 </body>
