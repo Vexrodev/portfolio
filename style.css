@@ -346,3 +346,53 @@ html {
   font-size: 1em;
   line-height: 1.6;
 }
+.about-section {
+  background: #1e1e2f;  /* Dark blue-ish background */
+  color: #e0e0ff;       /* Soft light text */
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.about-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #72b7f7;  /* Light blue accent */
+  text-align: center;
+}
+
+.about-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 25px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.about-section ul li {
+  background: #2a2a44;
+  padding: 12px 18px;
+  border-radius: 8px;
+  margin: 8px;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(114, 183, 247, 0.5);
+  transition: background 0.3s ease;
+  cursor: default;
+}
+
+.about-section ul li:hover {
+  background: #3c58a0;
+  box-shadow: 0 5px 15px rgba(114, 183, 247, 0.8);
+  color: #ffffff;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
