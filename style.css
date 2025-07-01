@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(270deg, #0a0a0a, #1a0000, #2a0000, #1a0000, #0a0a0a);
+  background-size: 600% 600%;
+  animation: gradientShift 30s ease infinite;
+  color: #f5f5f5;
+  line-height: 1.6;
+  transition: background 0.5s ease;
+}
+
+@keyframes gradientShift {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background: url('https://www.transparenttextures.com/patterns/diagmonds-light.png');
+  opacity: 0.05;
+  z-index: -1;
+}
+
+header {
+  background: #1a0000;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 15px #ff000066;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #ff3333;
+  text-shadow: 1px 1px 2px #000;
+}
+
+nav {
+  margin-top: 10px;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff3333;
+  text-shadow: 0 0 5px #ff3333cc;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  animation: fadeInUp 1s ease forwards;
+}
+
+h2 {
+  border-bottom: 2px solid #ff3333;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  color: #ff3333;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  padding: 10px 0;
+  font-size: 1.1rem;
+  transition: transform 0.25s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+ul li:hover {
+  transform: translateX(5px);
+  color: #ff6666;
+}
+
+a {
+  color: #ff6666;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ff3333;
+  text-shadow: 0 0 5px #ff3333aa;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff3333;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.25s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 8px #ff333344;
+}
+
+.button:hover {
+  background: #cc0000;
+  transform: scale(1.07);
+  box-shadow: 0 0 15px #ff3333aa;
+}
+
+/* Discord-specific button (optional) */
+.button.discord {
+  background: #7289da;
+  box-shadow: 0 0 8px #7289da88;
+}
+
+.button.discord:hover {
+  background: #5b6eae;
+  box-shadow: 0 0 20px #7289daaa;
+}
+
+iframe {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 25px #00000099;
+  transition: transform 0.3s ease;
+}
+
+iframe:hover {
+  transform: scale(1.01);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1a0000;
+  color: #999;
+  border-top: 1px solid #300000;
+  font-size: 0.9rem;
+}
+
+/* Animation */
+.fade-in {
+  animation: fadeIn 1.5s ease-in forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Image grid (for future gallery or screenshots) */
+.image-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image-grid img {
+  border-radius: 10px;
+  box-shadow: 0 0 10px #2ea043aa;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Hamburger menu button - hidden on desktop */
+#menu-toggle {
+  display: none;
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  color: #ff3333;
+  cursor: pointer;
+  z-index: 1001;
+  transition: color 0.3s ease;
+}
+
+#menu-toggle:hover {
+  color: #cc0000;
+}
+
+/* Responsive nav: default nav links hidden on small screens */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #1a0000;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    max-width: 250px;
+    padding: 20px;
+    box-shadow: 0 0 15px #ff000066;
+    border-radius: 0 0 0 10px;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    margin: 12px 0;
+  }
+
+  /* Show hamburger menu on mobile */
+  #menu-toggle {
+    display: block;
+  }
+
+  header {
+    position: relative;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: #ff3333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff3333aa;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+#back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#back-to-top:hover {
+  background: #cc0000;
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  transition: transform 0.25s ease, filter 0.3s ease;
+}
+
+.social-icons a svg {
+  width: 24px;
+  height: 24px;
+  filter: drop-shadow(0 0 1px rgba(0,0,0,0.3));
+  transition: fill 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px #ff3333cc);
+}
+
+.social-icons a:hover svg {
+  fill: #ff3333;
+  filter: drop-shadow(0 0 6px #ff3333cc);
+}
