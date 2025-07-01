@@ -314,3 +314,35 @@ html {
   fill: #ff3333;
   filter: drop-shadow(0 0 6px #ff3333cc);
 }
+#faq {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  padding: 40px 20px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(255, 0, 80, 0.1);
+}
+
+#faq h2 {
+  color: #ff3366;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 15px;
+}
+
+.faq-item h3 {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  color: #ff6699;
+}
+
+.faq-item p {
+  font-size: 1em;
+  line-height: 1.6;
+}
